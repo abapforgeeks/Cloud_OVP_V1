@@ -1,0 +1,37 @@
+@Metadata.layer: #CORE
+
+@UI.chart: [
+
+{
+qualifier: 'byPurchaseDocPriority',
+title: 'Purchase Document Priority',
+chartType: #DONUT,
+dimensions: ['Priority','PriorityText'],
+measures: ['TotalPos'],
+dimensionAttributes: [{ dimension: 'Priority',role: #CATEGORY },
+                     { dimension: 'PriorityText', role: #CATEGORY }],
+measureAttributes: [{ measure: 'TotalPOs',role: #AXIS_1,asDataPoint: true }]
+ }
+]
+@UI.presentationVariant: [{ groupBy: ['PurchaseDoc'],qualifier: 'myKPI',visualizations: [{ element: 'TotalPOs' }] }]
+annotate view Z_C_PurchaseStatusPrio with
+{
+
+  @UI.identification: [{
+  type: #FOR_INTENT_BASED_NAVIGATION,
+  semanticObjectAction: 'manage',
+  label: 'Display Purchase Document'
+   }]
+  PurchaseDoc;
+  
+  @UI.dataPoint.visualization: #NUMBER
+  @UI.kpi: [{ detail:{ defaultPresentationVariantQualifier: 'myKPI' } }]
+  TotalPOs;
+
+  @UI.textArrangement: #TEXT_FIRST
+  Priority;
+
+  @UI.textArrangement: #TEXT_FIRST
+  POStatus;
+
+}
