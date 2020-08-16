@@ -1,0 +1,8 @@
+@EndUserText.label: 'Overview Page Service'
+define service Z_sd_purchaseovp {
+  expose Z_I_PurchaseDoc;
+  expose Z_C_PurchaseFilterOVP;
+  expose Z_C_PurchaseStatusPrio;
+  expose Z_I_PO_Priority;
+  expose Z_I_PO_Status;
+}

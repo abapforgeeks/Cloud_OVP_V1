@@ -7,11 +7,23 @@ qualifier: 'byPurchaseDocPriority',
 title: 'Purchase Document Priority',
 chartType: #DONUT,
 dimensions: ['Priority','PriorityText'],
-measures: ['TotalPos'],
+measures: ['TotalPOs'],
 dimensionAttributes: [{ dimension: 'Priority',role: #CATEGORY },
                      { dimension: 'PriorityText', role: #CATEGORY }],
 measureAttributes: [{ measure: 'TotalPOs',role: #AXIS_1,asDataPoint: true }]
+ },
+ 
+ {
+qualifier: 'byPurchaseDocPOStatus',
+title: 'Purchase DocumentPOStatus',
+chartType: #DONUT,
+dimensions: ['POStatus','StatusText'],
+measures: ['TotalPOs'],
+dimensionAttributes: [{ dimension: 'POStatus',role: #CATEGORY },
+                     { dimension: 'StatusText', role: #CATEGORY }],
+measureAttributes: [{ measure: 'TotalPOs',role: #AXIS_1,asDataPoint: true }]
  }
+ 
 ]
 @UI.presentationVariant: [{ groupBy: ['PurchaseDoc'],qualifier: 'myKPI',visualizations: [{ element: 'TotalPOs' }] }]
 annotate view Z_C_PurchaseStatusPrio with
