@@ -1,0 +1,20 @@
+@Metadata.layer: #CORE
+annotate view ztest_bar with
+{
+
+  @UI.lineItem: [{ position: 10,label:'Compannycode',qualifier: 'Q1' }]
+  com_code;
+
+  @UI.dataPoint:
+  {
+   title: 'Number of Plants in CC',
+   criticalityCalculation: {
+          improvementDirection: #TARGET,
+          toleranceRangeLowValue: 8,
+          deviationRangeHighValue: 10
+                            }
+    }
+  @UI.lineItem: [{ position: 20,label:'Plants',qualifier: 'Q1',type:#AS_DATAPOINT }]
+  tot_plants;
+
+}

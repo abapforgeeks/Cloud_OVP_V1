@@ -14,6 +14,6 @@ define view Z_C_PurchaseFilterOVP
       '' as Priority,
 
       @UI.selectionField: [{ exclude: false,position: 20 }]
-      @Consumption.valueHelpDefinition: [{entity:{ name: 'Z_I_PO_Status',element: 'status'}  }]
+      @Consumption.valueHelpDefinition: [{entity:{ name: 'Z_I_POSTATUS_MAIN',element: 'status'}  }]
       '' as POStatus
 }

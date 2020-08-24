@@ -1,0 +1,4 @@
+@EndUserText.label: 'testbar'
+define service Z_sd_testbar {
+  expose ztest_bar;
+}

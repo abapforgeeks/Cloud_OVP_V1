@@ -31,7 +31,7 @@ annotate view Z_C_PurchaseStatusPrio with
 
   @UI.identification: [{
   type: #FOR_INTENT_BASED_NAVIGATION,
-  semanticObjectAction: 'manage',
+  semanticObjectAction: 'PurchasingDocument',
   label: 'Display Purchase Document'
    }]
   PurchaseDoc;

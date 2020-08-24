@@ -1,0 +1,38 @@
+@Metadata.layer: #CORE
+annotate view z_c_BudgetOverview with
+{
+  //z_c_BudgetOverview
+  @UI.lineItem: [{ position: 10,label: 'Purchase' }]
+  PurchaseDoc;
+
+  @UI.lineItem: [{ position:  20}]
+  CreatedBy;
+  @UI: {
+  lineItem:[{
+  importance: #HIGH,
+  position: 30
+  }],
+  dataPoint: {
+  title: 'Created On'
+  }
+  }
+  CreateTimeDate;
+
+  @UI: {
+  dataPoint: {
+  title: 'Overall Price',
+  valueFormat.numberOfFractionalDigits: 2,
+  minimumValue: 0,
+  maximumValue: 100,
+  criticalityCalculation: {
+      improvementDirection: #MINIMIZE,
+      toleranceRangeHighValue: 80.00,
+      deviationRangeHighValue: 100.00
+  }
+  }
+  }
+  @UI.lineItem: [{ position: 40,label:'Budget',type:#AS_DATAPOINT }]
+
+  BudgentUsage;
+
+}

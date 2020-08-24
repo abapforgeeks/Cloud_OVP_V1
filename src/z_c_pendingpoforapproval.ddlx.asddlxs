@@ -1,0 +1,55 @@
+@Metadata.layer: #CORE
+annotate view Z_C_PendingPOforApproval with
+{
+  //Z_C_PendingPOforApproval
+  @UI.lineItem: [{
+   position: 10,
+   importance: #HIGH,
+   label: 'Document',
+   type: #FOR_INTENT_BASED_NAVIGATION,
+   semanticObjectAction: 'manage'
+  }]
+  PurchaseDoc;
+
+  @UI.lineItem: [{
+  position: 20,
+  importance: #HIGH,
+  label: 'Description'
+  }]
+  Description;
+
+  @UI.lineItem: [{
+  position: 30,
+  importance: #HIGH,
+  label: 'Description'
+  }]
+  POTOtalPrice;
+  @UI.lineItem: [{
+   position: 40,
+   importance: #HIGH,
+   label: 'Description'
+   }]
+  CompanyCode;
+  @UI.lineItem: [{
+  position: 50,
+  importance: #HIGH,
+  label: 'Description'
+  }]
+  PriorityText;
+  @UI.lineItem: [{
+   position: 60,
+   importance: #HIGH,
+   label: 'Description'
+   }]
+
+  CreatedBy;
+  @UI.lineItem: [{
+  position: 70,
+  importance: #HIGH,
+  label: 'Description'
+  }]
+
+  Approval;
+
+
+}

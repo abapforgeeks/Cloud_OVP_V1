@@ -5,4 +5,9 @@ define service Z_sd_purchaseovp {
   expose Z_C_PurchaseStatusPrio;
   expose Z_I_PO_Priority;
   expose Z_I_PO_Status;
+  expose z_i_postatus_main;
+  expose Z_I_PendingPOforApproval;
+  expose Z_C_PendingPOforApproval;
+  expose z_c_BudgetOverview;
+  expose Z_C_PurchaseItemsOVP;
 }

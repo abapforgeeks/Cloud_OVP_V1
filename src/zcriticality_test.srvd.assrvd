@@ -1,0 +1,4 @@
+@EndUserText.label: 'cds'
+define service Zcriticality_test {
+  expose zdemo_criticality_ovp;
+}
